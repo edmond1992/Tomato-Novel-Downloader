@@ -8,6 +8,9 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends pkg-config libssl-dev ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
+#Add Opencc
+RUN apt-get install -y opencc
+
 # Copy source (includes Tomato-Novel-Official-API as subdir in the build context)
 COPY . /workspace/Tomato-Novel-Downloader
 
